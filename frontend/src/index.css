@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #111111;
+  color: #f8f3ea;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+.cinematic-panel {
+  background:
+    linear-gradient(135deg, rgba(213, 177, 109, 0.12), rgba(139, 104, 66, 0.06)),
+    rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(213, 177, 109, 0.22);
+}
+
+.field {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(213, 177, 109, 0.25);
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.8rem 0.95rem;
+  color: #f8f3ea;
+  outline: none;
+}
+
+.field:focus {
+  border-color: #d5b16d;
+  box-shadow: 0 0 0 3px rgba(213, 177, 109, 0.14);
+}
+
+.field option {
+  background: #241913;
+  color: #f8f3ea;
+}
