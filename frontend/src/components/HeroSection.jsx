@@ -16,7 +16,7 @@ function HeroSection() {
             Choose your film style, compare options, and request a custom quote.
           </p>
           <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-            <Button to="/login">Get a Quote</Button>
+            <Button to="/start">Get a Quote</Button>
             <Button to="/packages" variant="secondary">View Packages</Button>
           </div>
         </div>

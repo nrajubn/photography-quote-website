@@ -11,8 +11,8 @@ function ThankYouPage() {
       <div className="cinematic-panel w-full rounded-3xl p-8 text-center shadow-glow">
         <p className="mb-3 text-sm uppercase tracking-[0.28em] text-champagne">Submitted</p>
         <h1 className="font-display text-4xl text-white md:text-5xl">Your quote request has been submitted.</h1>
-        {quote?.selectedPackageName && (
-          <p className="mt-5 text-lg text-champagne">{quote.selectedPackageName}</p>
+        {(quote?.selectedVideoPackage || quote?.eventCategory) && (
+          <p className="mt-5 text-lg text-champagne">{quote.selectedVideoPackage || quote.eventCategory}</p>
         )}
         <p className="mx-auto mt-5 max-w-xl leading-7 text-ivory/72">
           We will review your event details and contact you soon with a custom quote.

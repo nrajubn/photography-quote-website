@@ -1,5 +1,6 @@
 package com.photographyquote.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -18,20 +19,56 @@ public class QuoteRequest {
     private String clientName;
     private String email;
     private String phone;
-    private String selectedPackageName;
-    private String eventType;
+    private String eventCategory;
     private LocalDate weddingDate;
     private String location;
     private Integer numberOfEvents;
+
+    @Column(length = 2000)
+    private String selectedIndianEvents;
+
+    private String customEventName;
+
+    @Column(length = 2000)
+    private String eventNamesOrNotes;
+
     private Integer coverageHours;
+    private String indoorOutdoorType;
+    private Integer guestCount;
+
+    @Column(length = 2000)
+    private String specialTraditions;
+
     private String serviceType;
-    private boolean needsDrone;
-    private boolean needsTeaserReel;
-    private boolean needsFullCeremonyVideo;
-    private boolean needsInterviews;
-    private boolean needsConceptualScenes;
+    private boolean photographyNeeded;
+    private String photoDeliverableEstimate;
+
+    @Column(length = 2000)
+    private String selectedPhotographyOptions;
+
+    private String selectedVideoPackage;
+
+    private String liveStreamingPreference;
+
+    @Column(length = 2000)
+    private String selectedDeliverables;
+
+    private String finalVideoStyle;
+
+    @Column(length = 2000)
+    private String selectedVideoAddOns;
+
+    @Column(length = 2000)
+    private String selectedGeneralAddOns;
+
+    @Column(length = 1000)
+    private String referenceVideoLink;
+
     private String budgetRange;
+
+    @Column(length = 3000)
     private String specialNotes;
+
     private LocalDateTime createdAt;
 
     public Long getId() {
@@ -66,20 +103,12 @@ public class QuoteRequest {
         this.phone = phone;
     }
 
-    public String getSelectedPackageName() {
-        return selectedPackageName;
+    public String getEventCategory() {
+        return eventCategory;
     }
 
-    public void setSelectedPackageName(String selectedPackageName) {
-        this.selectedPackageName = selectedPackageName;
-    }
-
-    public String getEventType() {
-        return eventType;
-    }
-
-    public void setEventType(String eventType) {
-        this.eventType = eventType;
+    public void setEventCategory(String eventCategory) {
+        this.eventCategory = eventCategory;
     }
 
     public LocalDate getWeddingDate() {
@@ -106,12 +135,60 @@ public class QuoteRequest {
         this.numberOfEvents = numberOfEvents;
     }
 
+    public String getSelectedIndianEvents() {
+        return selectedIndianEvents;
+    }
+
+    public void setSelectedIndianEvents(String selectedIndianEvents) {
+        this.selectedIndianEvents = selectedIndianEvents;
+    }
+
+    public String getCustomEventName() {
+        return customEventName;
+    }
+
+    public void setCustomEventName(String customEventName) {
+        this.customEventName = customEventName;
+    }
+
+    public String getEventNamesOrNotes() {
+        return eventNamesOrNotes;
+    }
+
+    public void setEventNamesOrNotes(String eventNamesOrNotes) {
+        this.eventNamesOrNotes = eventNamesOrNotes;
+    }
+
     public Integer getCoverageHours() {
         return coverageHours;
     }
 
     public void setCoverageHours(Integer coverageHours) {
         this.coverageHours = coverageHours;
+    }
+
+    public String getIndoorOutdoorType() {
+        return indoorOutdoorType;
+    }
+
+    public void setIndoorOutdoorType(String indoorOutdoorType) {
+        this.indoorOutdoorType = indoorOutdoorType;
+    }
+
+    public Integer getGuestCount() {
+        return guestCount;
+    }
+
+    public void setGuestCount(Integer guestCount) {
+        this.guestCount = guestCount;
+    }
+
+    public String getSpecialTraditions() {
+        return specialTraditions;
+    }
+
+    public void setSpecialTraditions(String specialTraditions) {
+        this.specialTraditions = specialTraditions;
     }
 
     public String getServiceType() {
@@ -122,44 +199,84 @@ public class QuoteRequest {
         this.serviceType = serviceType;
     }
 
-    public boolean isNeedsDrone() {
-        return needsDrone;
+    public boolean isPhotographyNeeded() {
+        return photographyNeeded;
     }
 
-    public void setNeedsDrone(boolean needsDrone) {
-        this.needsDrone = needsDrone;
+    public void setPhotographyNeeded(boolean photographyNeeded) {
+        this.photographyNeeded = photographyNeeded;
     }
 
-    public boolean isNeedsTeaserReel() {
-        return needsTeaserReel;
+    public String getPhotoDeliverableEstimate() {
+        return photoDeliverableEstimate;
     }
 
-    public void setNeedsTeaserReel(boolean needsTeaserReel) {
-        this.needsTeaserReel = needsTeaserReel;
+    public void setPhotoDeliverableEstimate(String photoDeliverableEstimate) {
+        this.photoDeliverableEstimate = photoDeliverableEstimate;
     }
 
-    public boolean isNeedsFullCeremonyVideo() {
-        return needsFullCeremonyVideo;
+    public String getSelectedPhotographyOptions() {
+        return selectedPhotographyOptions;
     }
 
-    public void setNeedsFullCeremonyVideo(boolean needsFullCeremonyVideo) {
-        this.needsFullCeremonyVideo = needsFullCeremonyVideo;
+    public void setSelectedPhotographyOptions(String selectedPhotographyOptions) {
+        this.selectedPhotographyOptions = selectedPhotographyOptions;
     }
 
-    public boolean isNeedsInterviews() {
-        return needsInterviews;
+    public String getSelectedVideoPackage() {
+        return selectedVideoPackage;
     }
 
-    public void setNeedsInterviews(boolean needsInterviews) {
-        this.needsInterviews = needsInterviews;
+    public void setSelectedVideoPackage(String selectedVideoPackage) {
+        this.selectedVideoPackage = selectedVideoPackage;
     }
 
-    public boolean isNeedsConceptualScenes() {
-        return needsConceptualScenes;
+    public String getLiveStreamingPreference() {
+        return liveStreamingPreference;
     }
 
-    public void setNeedsConceptualScenes(boolean needsConceptualScenes) {
-        this.needsConceptualScenes = needsConceptualScenes;
+    public void setLiveStreamingPreference(String liveStreamingPreference) {
+        this.liveStreamingPreference = liveStreamingPreference;
+    }
+
+    public String getSelectedDeliverables() {
+        return selectedDeliverables;
+    }
+
+    public void setSelectedDeliverables(String selectedDeliverables) {
+        this.selectedDeliverables = selectedDeliverables;
+    }
+
+    public String getFinalVideoStyle() {
+        return finalVideoStyle;
+    }
+
+    public void setFinalVideoStyle(String finalVideoStyle) {
+        this.finalVideoStyle = finalVideoStyle;
+    }
+
+    public String getSelectedVideoAddOns() {
+        return selectedVideoAddOns;
+    }
+
+    public void setSelectedVideoAddOns(String selectedVideoAddOns) {
+        this.selectedVideoAddOns = selectedVideoAddOns;
+    }
+
+    public String getSelectedGeneralAddOns() {
+        return selectedGeneralAddOns;
+    }
+
+    public void setSelectedGeneralAddOns(String selectedGeneralAddOns) {
+        this.selectedGeneralAddOns = selectedGeneralAddOns;
+    }
+
+    public String getReferenceVideoLink() {
+        return referenceVideoLink;
+    }
+
+    public void setReferenceVideoLink(String referenceVideoLink) {
+        this.referenceVideoLink = referenceVideoLink;
     }
 
     public String getBudgetRange() {

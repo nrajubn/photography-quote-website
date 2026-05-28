@@ -33,7 +33,7 @@ function PackageCard({ packageOption }) {
         <p className="mt-2 text-sm leading-6 text-ivory/75">{packageOption.bestFor}</p>
       </div>
       <div className="mt-auto flex flex-col gap-3 pt-6">
-        <Button to={`/quote?package=${encodeURIComponent(packageOption.name)}`}>Select Package</Button>
+        <Button to={`/client/wedding?package=${encodeURIComponent(packageOption.name)}`}>Select Package</Button>
         <Button to="/compare" variant="secondary">Compare</Button>
       </div>
     </article>

@@ -17,7 +17,7 @@ function LoginPage() {
           <button className="rounded-full border border-white/20 px-5 py-3 text-sm font-semibold text-ivory/85 opacity-80">
             Continue with Google
           </button>
-          <Button onClick={() => navigate("/packages")}>Continue as Guest</Button>
+          <Button onClick={() => navigate("/client")}>Continue as Guest</Button>
         </div>
       </div>
     </section>

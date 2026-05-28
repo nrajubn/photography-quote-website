@@ -146,6 +146,30 @@ curl -X POST http://localhost:8080/api/quotes \
 - API base URL: `frontend/src/api/axiosClient.js`
 - Page text: `frontend/src/pages` and `frontend/src/components`
 
+## Email Notifications
+
+Quote submission email notifications are wired in the backend, but disabled by default so local development does not fail without SMTP credentials.
+
+Admin email:
+
+```text
+vanaravisuals.studio@gmail.com
+```
+
+To enable real email sending, update `backend/src/main/resources/application.properties` with SMTP settings:
+
+```properties
+quote.notifications.enabled=true
+spring.mail.host=smtp.gmail.com
+spring.mail.port=587
+spring.mail.username=your-email@gmail.com
+spring.mail.password=your-google-app-password
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.starttls.enable=true
+```
+
+Use a Google app password, not your normal Gmail password.
+
 ## Future TODO
 
 - Real Google OAuth login
